@@ -14,12 +14,16 @@
 @end
 
 @implementation WISecondViewController
-@synthesize header;
+@synthesize headerArray;
+@synthesize headerArrayHeader;
+@synthesize headerTable;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    headerTable.dataSource = self;
+    headerTable.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,14 +33,80 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    WIAppDelegate *app = (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    [self updateResponse:app.response];
+    NSLog(@"hoge");
+    [headerTable reloadData];
+}
+
+// table view 処理 ////////////////////////////////////////////////////////////////////////////////
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //
-    WIAppDelegate *app =
-    (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    // NSLog(@"%@", app.sourceStr);
-    
-    header.text = app.headerStr;
-    header.editable = NO;
+    static NSString *CellIdentifier = @"Cell";
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+
+    // NSLog(@"%@", indexPath.row);
+    cell.textLabel.text = [headerArray objectAtIndex:indexPath.section];
+
+    //cell.textLabel.text = [NSString stringWithFormat:@"Sec=%d,Row=%d", indexPath.section, indexPath.row];
+
+    NSLog(@"hoge2");
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSLog(@"hoge3");
+    return [headerArray count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"hoge4");
+    return 1;
+}
+
+- (NSString *)tableView:(UITableViewCell *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSLog(@"hoge5");
+    return [headerArrayHeader objectAtIndex:section];
+    // return @"hoge";
+}
+
+- (void)updateResponse:(NSHTTPURLResponse *)response
+{
+    headerArray = [NSMutableArray array];
+    headerArrayHeader = [NSMutableArray array];
+
+    [headerArrayHeader addObject:@"expectedContentLength"];
+    [headerArray       addObject:[NSString stringWithFormat:@"%lld", [response expectedContentLength]]];
+    [headerArrayHeader addObject:@"mimeType"];
+    [headerArray       addObject:[NSString stringWithFormat:@"%@", [response MIMEType]]];
+    [headerArrayHeader addObject:@"suggestedFilename"];
+    [headerArray       addObject:[NSString stringWithFormat:@"%@", [response suggestedFilename]]];
+    [headerArrayHeader addObject:@"textEncodingName"];
+    [headerArray       addObject:[NSString stringWithFormat:@"%@", [response textEncodingName]]];
+    [headerArrayHeader addObject:@"URL"];
+    [headerArray       addObject:[NSString stringWithFormat:@"%@", [response URL]]];
+    [headerArrayHeader addObject:@"statusCode"];
+    [headerArray       addObject:[NSString stringWithFormat:@"%d", [response statusCode]]];
+    [headerArrayHeader addObject:@"localizedStringForStatusCode"];
+    [headerArray       addObject:[NSString stringWithFormat:@"%@", [NSHTTPURLResponse localizedStringForStatusCode:[response statusCode]]]];
+
+    NSDictionary *dict = [response allHeaderFields];
+    NSArray *allKeys = [dict allKeys];
+    int i = 0;
+    int l = [allKeys count];
+    NSString *key;
+    NSString *value;
+    for (i = 0; i < l; i++) {
+        key = [allKeys objectAtIndex:i];
+        value = (NSString *)[dict valueForKey:key];
+        [headerArrayHeader addObject:[NSString stringWithFormat:@"header %@", key]];
+        [headerArray       addObject:[NSString stringWithFormat:@"%@", value]];
+    }
 }
 
 @end

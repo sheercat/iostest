@@ -14,5 +14,6 @@
 @property (nonatomic, copy) NSString *sourceStr;
 @property (nonatomic, copy) NSString *headerStr;
 @property (nonatomic, copy) NSDictionary *headerDict;
+@property (nonatomic, copy) NSHTTPURLResponse *response;
 
 @end

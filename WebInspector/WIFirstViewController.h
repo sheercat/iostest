@@ -12,8 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *url;
 - (IBAction)getURL:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *header;
-@property (nonatomic, copy) NSMutableArray *headerArray;
-@property (nonatomic, copy) NSMutableArray *headerArrayHeader;
 @property (nonatomic, copy) NSMutableData *receivedData;
 
 @end

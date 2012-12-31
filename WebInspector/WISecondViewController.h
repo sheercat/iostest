@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface WISecondViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextView *header;
+@property (weak, nonatomic) IBOutlet UITableView *headerTable;
+@property (nonatomic, copy) NSMutableArray *headerArray;
+@property (nonatomic, copy) NSMutableArray *headerArrayHeader;
 
 @end
