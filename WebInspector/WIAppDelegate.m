@@ -11,6 +11,7 @@
 @implementation WIAppDelegate
 @synthesize sourceStr;
 @synthesize headerStr;
+@synthesize response;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -18,6 +19,7 @@
     
     headerStr = @"header";
     sourceStr = @"source";
+    response = [NSMutableArray array];
 
     return YES;
 }

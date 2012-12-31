@@ -11,5 +11,8 @@
 
 @interface WIResponseViewController : WIBaseViewController
 @property (weak, nonatomic) IBOutlet UITableView *responseHeader;
+@property (nonatomic, copy) NSMutableArray *headerArray;
+@property (nonatomic, copy) NSMutableArray *headerArrayHeader;
+
 
 @end
