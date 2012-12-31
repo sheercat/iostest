@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WIBaseViewController.h"
 
-@interface WIFirstViewController : UIViewController
+@interface WIFirstViewController : WIBaseViewController
 @property (weak, nonatomic) IBOutlet UITextField *url;
 - (IBAction)getURL:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *header;
 @property (nonatomic, copy) NSMutableData *receivedData;
+@property (weak, nonatomic) IBOutlet UISwitch *inihibitRedirection;
 
 @end

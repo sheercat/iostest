@@ -17,6 +17,7 @@
 @implementation WIFirstViewController;
 @synthesize url;
 @synthesize receivedData;
+@synthesize inihibitRedirection;
 
 
 - (void)viewDidLoad
@@ -65,7 +66,7 @@
     NSLog(@"receive response");
 
     WIAppDelegate *app = (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
-    app.response = (NSHTTPURLResponse *)response;
+    [app.response addObject:response]; // = (NSHTTPURLResponse *)response;
 
     [receivedData setLength:0];
 }
@@ -101,7 +102,13 @@
     NSLog(@"willSendRequest URL:%@", [[request URL] absoluteString]);
     NSURLRequest *newRequest = request;
     if (redirectResponse) {
+      NSLog(@"response %@", redirectResponse);
+      if (inihibitRedirection.on) {
         newRequest = nil;
+      } else {
+        WIAppDelegate *app = (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
+        [app.response addObject:redirectResponse];
+      }
     }
     return newRequest;
 }

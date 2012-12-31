@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WIBaseViewController.h"
 
-@interface WIThirdViewController : UIViewController
+@interface WIThirdViewController : WIBaseViewController
 @property (weak, nonatomic) IBOutlet UITextView *source;
 
 @end

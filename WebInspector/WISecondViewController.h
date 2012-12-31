@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WIBaseViewController.h"
 
-@interface WISecondViewController : UIViewController
+@interface WISecondViewController : WIBaseViewController
 @property (weak, nonatomic) IBOutlet UITableView *headerTable;
 @property (nonatomic, copy) NSMutableArray *headerArray;
 @property (nonatomic, copy) NSMutableArray *headerArrayHeader;

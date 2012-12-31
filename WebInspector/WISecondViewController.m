@@ -36,7 +36,6 @@
     WIAppDelegate *app = (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
 
     [self updateResponse:app.response];
-    NSLog(@"hoge");
     [headerTable reloadData];
 }
 
@@ -50,29 +49,21 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
-    // NSLog(@"%@", indexPath.row);
     cell.textLabel.text = [headerArray objectAtIndex:indexPath.section];
 
-    //cell.textLabel.text = [NSString stringWithFormat:@"Sec=%d,Row=%d", indexPath.section, indexPath.row];
-
-    NSLog(@"hoge2");
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSLog(@"hoge3");
     return [headerArray count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"hoge4");
     return 1;
 }
 
 - (NSString *)tableView:(UITableViewCell *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSLog(@"hoge5");
     return [headerArrayHeader objectAtIndex:section];
-    // return @"hoge";
 }
 
 - (void)updateResponse:(NSHTTPURLResponse *)response
