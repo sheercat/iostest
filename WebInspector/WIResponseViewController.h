@@ -13,6 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *responseHeader;
 @property (nonatomic, copy) NSMutableArray *headerArray;
 @property (nonatomic, copy) NSMutableArray *headerArrayHeader;
-
+@property (nonatomic) NSInteger detailItem;
 
 @end

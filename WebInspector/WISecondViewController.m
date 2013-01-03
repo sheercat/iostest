@@ -8,6 +8,7 @@
 
 #import "WISecondViewController.h"
 #import "WIAppDelegate.h"
+#import "WIResponseViewController.h"
 
 @interface WISecondViewController ()
 
@@ -16,14 +17,14 @@
 @implementation WISecondViewController
 @synthesize headerArray;
 @synthesize headerArrayHeader;
-@synthesize headerTable;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    headerTable.dataSource = self;
-    headerTable.delegate = self;
+    //    headerTable.dataSource = self;
+    //    headerTable.delegate = self;
+ self.responseViewController = (WIResponseViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,20 +36,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     WIAppDelegate *app = (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
     [self updateResponse:app.response];
-    [headerTable reloadData];
+    [self.tableView reloadData];
 }
 
-// table view 処理 ////////////////////////////////////////////////////////////////////////////////
+// table view delegate ////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
-    cell.textLabel.text = [headerArray objectAtIndex:indexPath.section];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+
+    cell.textLabel.text = [headerArray objectAtIndex:indexPath.row]; // section];
     
     return cell;
 }
@@ -63,22 +58,67 @@
 }
 
 - (NSString *)tableView:(UITableViewCell *)tableView titleForHeaderInSection:(NSInteger)section {
+  if ([headerArrayHeader count] > 0 ) {
     return [headerArrayHeader objectAtIndex:section];
+  } else {
+    return @"";
+  }
 }
+
+// - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+// {
+//   NSLog(@"test1");
+//   // if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//   NSLog(@"test2");
+//       // NSDate *object = _objects[indexPath.row];
+//       self.responseViewController.detailItem = indexPath.row; // object;
+//       // }
+//      [self.navigationController pushViewController:self.responseViewController animated:YES];
+// }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  NSLog(@"test3, %@", [segue identifier]);
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+  NSLog(@"test4");
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        // NSDate *object = _objects[indexPath.row];
+        // [[segue destinationViewController] setDetailItem:object];
+        [[segue destinationViewController] setDetailItem:indexPath.row];
+    }
+}
+// 
+// - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//   NSLog(@"hoge");
+//     [tableView deselectRowAtIndexPath:indexPath animated:YES]; // 選択状態の解除をします。
+//     WIResponseViewController *view = [[WIResponseViewController alloc] initWithNibName:@"WIResponseViewController" bundle:nil];
+//     view.title = @"下の階層です";
+//     [self.navigationController pushViewController:view animated:YES];
+// }
+
+////////////////////////////////////////////////////////////////////////////////
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+  //NSLog(@"super touch %@", event);
+   [super touchesBegan:touches withEvent:event];
+}
+
 
 - (void)updateResponse:(NSArray *)response
 {
     headerArrayHeader = [NSMutableArray array];
     headerArray = [NSMutableArray array];
-    NSEnumerator *enumerator = [response objectEnumerator];
-    id obj;
-    NSLog(@"hoge");
-    while (obj = [enumerator nextObject]) {
+    // NSEnumerator *enumerator = [response objectEnumerator];
+    // id obj;
+    // while (obj = [enumerator nextObject]) {
+    //     [headerArrayHeader addObject:@"URL"];
+    //     [headerArray       addObject:[NSString stringWithFormat:@"%@", [(NSHTTPURLResponse *)obj URL]]];
+    // }
+    
+    for (id obj in response) {
         [headerArrayHeader addObject:@"URL"];
         [headerArray       addObject:[NSString stringWithFormat:@"%@", [(NSHTTPURLResponse *)obj URL]]];
-        // NSLog(@"value: %@\n", obj);
     }
-    
 }
 
 @end

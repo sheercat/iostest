@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WIBaseViewController.h"
+#import "WIResponseViewController.h"
 
-@interface WISecondViewController : WIBaseViewController
-@property (weak, nonatomic) IBOutlet UITableView *headerTable;
+@interface WISecondViewController : UITableViewController
+@property (strong, nonatomic) WIResponseViewController *responseViewController;
 @property (nonatomic, copy) NSMutableArray *headerArray;
 @property (nonatomic, copy) NSMutableArray *headerArrayHeader;
 

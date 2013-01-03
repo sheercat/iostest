@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7A311E416943E6100A9643A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A311E316943E6100A9643A /* UIKit.framework */; };
+		E7A311E616943E6100A9643A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A311E516943E6100A9643A /* Foundation.framework */; };
+		E7A311E816943E6100A9643A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A311E716943E6100A9643A /* CoreGraphics.framework */; };
+		E7A311EE16943E6100A9643A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7A311EC16943E6100A9643A /* InfoPlist.strings */; };
+		E7A311F016943E6100A9643A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A311EF16943E6100A9643A /* main.m */; };
+		E7A311F416943E6100A9643A /* KMNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A311F316943E6100A9643A /* KMNAppDelegate.m */; };
+		E7A311F616943E6100A9643A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A311F516943E6100A9643A /* Default.png */; };
+		E7A311F816943E6100A9643A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A311F716943E6100A9643A /* Default@2x.png */; };
+		E7A311FA16943E6100A9643A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A311F916943E6100A9643A /* Default-568h@2x.png */; };
+		E7A311FD16943E6100A9643A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A311FB16943E6100A9643A /* MainStoryboard_iPhone.storyboard */; };
+		E7A3120016943E6100A9643A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A311FE16943E6100A9643A /* MainStoryboard_iPad.storyboard */; };
+		E7A3120316943E6100A9643A /* KMNMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A3120216943E6100A9643A /* KMNMasterViewController.m */; };
+		E7A3120616943E6100A9643A /* KMNDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A3120516943E6100A9643A /* KMNDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E7A311DF16943E6100A9643A /* KMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A311E316943E6100A9643A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E7A311E516943E6100A9643A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E7A311E716943E6100A9643A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E7A311EB16943E6100A9643A /* KMN-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KMN-Info.plist"; sourceTree = "<group>"; };
+		E7A311ED16943E6100A9643A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E7A311EF16943E6100A9643A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7A311F116943E6100A9643A /* KMN-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KMN-Prefix.pch"; sourceTree = "<group>"; };
+		E7A311F216943E6100A9643A /* KMNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMNAppDelegate.h; sourceTree = "<group>"; };
+		E7A311F316943E6100A9643A /* KMNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMNAppDelegate.m; sourceTree = "<group>"; };
+		E7A311F516943E6100A9643A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E7A311F716943E6100A9643A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E7A311F916943E6100A9643A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E7A311FC16943E6100A9643A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		E7A311FF16943E6100A9643A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		E7A3120116943E6100A9643A /* KMNMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMNMasterViewController.h; sourceTree = "<group>"; };
+		E7A3120216943E6100A9643A /* KMNMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMNMasterViewController.m; sourceTree = "<group>"; };
+		E7A3120416943E6100A9643A /* KMNDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMNDetailViewController.h; sourceTree = "<group>"; };
+		E7A3120516943E6100A9643A /* KMNDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMNDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7A311DC16943E6100A9643A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A311E416943E6100A9643A /* UIKit.framework in Frameworks */,
+				E7A311E616943E6100A9643A /* Foundation.framework in Frameworks */,
+				E7A311E816943E6100A9643A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7A311D416943E6100A9643A = {
+			isa = PBXGroup;
+			children = (
+				E7A311E916943E6100A9643A /* KMN */,
+				E7A311E216943E6100A9643A /* Frameworks */,
+				E7A311E016943E6100A9643A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7A311E016943E6100A9643A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7A311DF16943E6100A9643A /* KMN.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7A311E216943E6100A9643A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7A311E316943E6100A9643A /* UIKit.framework */,
+				E7A311E516943E6100A9643A /* Foundation.framework */,
+				E7A311E716943E6100A9643A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7A311E916943E6100A9643A /* KMN */ = {
+			isa = PBXGroup;
+			children = (
+				E7A311F216943E6100A9643A /* KMNAppDelegate.h */,
+				E7A311F316943E6100A9643A /* KMNAppDelegate.m */,
+				E7A311FB16943E6100A9643A /* MainStoryboard_iPhone.storyboard */,
+				E7A311FE16943E6100A9643A /* MainStoryboard_iPad.storyboard */,
+				E7A3120116943E6100A9643A /* KMNMasterViewController.h */,
+				E7A3120216943E6100A9643A /* KMNMasterViewController.m */,
+				E7A3120416943E6100A9643A /* KMNDetailViewController.h */,
+				E7A3120516943E6100A9643A /* KMNDetailViewController.m */,
+				E7A311EA16943E6100A9643A /* Supporting Files */,
+			);
+			path = KMN;
+			sourceTree = "<group>";
+		};
+		E7A311EA16943E6100A9643A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7A311EB16943E6100A9643A /* KMN-Info.plist */,
+				E7A311EC16943E6100A9643A /* InfoPlist.strings */,
+				E7A311EF16943E6100A9643A /* main.m */,
+				E7A311F116943E6100A9643A /* KMN-Prefix.pch */,
+				E7A311F516943E6100A9643A /* Default.png */,
+				E7A311F716943E6100A9643A /* Default@2x.png */,
+				E7A311F916943E6100A9643A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7A311DE16943E6100A9643A /* KMN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A3120916943E6100A9643A /* Build configuration list for PBXNativeTarget "KMN" */;
+			buildPhases = (
+				E7A311DB16943E6100A9643A /* Sources */,
+				E7A311DC16943E6100A9643A /* Frameworks */,
+				E7A311DD16943E6100A9643A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KMN;
+			productName = KMN;
+			productReference = E7A311DF16943E6100A9643A /* KMN.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7A311D616943E6100A9643A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KMN;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Tomoo Amano";
+			};
+			buildConfigurationList = E7A311D916943E6100A9643A /* Build configuration list for PBXProject "KMN" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E7A311D416943E6100A9643A;
+			productRefGroup = E7A311E016943E6100A9643A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7A311DE16943E6100A9643A /* KMN */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7A311DD16943E6100A9643A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A311EE16943E6100A9643A /* InfoPlist.strings in Resources */,
+				E7A311F616943E6100A9643A /* Default.png in Resources */,
+				E7A311F816943E6100A9643A /* Default@2x.png in Resources */,
+				E7A311FA16943E6100A9643A /* Default-568h@2x.png in Resources */,
+				E7A311FD16943E6100A9643A /* MainStoryboard_iPhone.storyboard in Resources */,
+				E7A3120016943E6100A9643A /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7A311DB16943E6100A9643A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7A311F016943E6100A9643A /* main.m in Sources */,
+				E7A311F416943E6100A9643A /* KMNAppDelegate.m in Sources */,
+				E7A3120316943E6100A9643A /* KMNMasterViewController.m in Sources */,
+				E7A3120616943E6100A9643A /* KMNDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E7A311EC16943E6100A9643A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7A311ED16943E6100A9643A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E7A311FB16943E6100A9643A /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7A311FC16943E6100A9643A /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E7A311FE16943E6100A9643A /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7A311FF16943E6100A9643A /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7A3120716943E6100A9643A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7A3120816943E6100A9643A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7A3120A16943E6100A9643A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KMN/KMN-Prefix.pch";
+				INFOPLIST_FILE = "KMN/KMN-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E7A3120B16943E6100A9643A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KMN/KMN-Prefix.pch";
+				INFOPLIST_FILE = "KMN/KMN-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7A311D916943E6100A9643A /* Build configuration list for PBXProject "KMN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A3120716943E6100A9643A /* Debug */,
+				E7A3120816943E6100A9643A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A3120916943E6100A9643A /* Build configuration list for PBXNativeTarget "KMN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7A3120A16943E6100A9643A /* Debug */,
+				E7A3120B16943E6100A9643A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7A311D616943E6100A9643A /* Project object */;
+}
