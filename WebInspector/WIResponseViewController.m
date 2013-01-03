@@ -17,6 +17,7 @@
 @synthesize headerArray;
 @synthesize headerArrayHeader;
 @synthesize responseHeader;
+@synthesize detailItem;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,8 +43,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"segue");
+- (void)viewWillAppear:(BOOL)animated {
+    WIAppDelegate *app = (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [self updateResponse:[app.response objectAtIndex:detailItem]];
+    [self.responseHeader reloadData];
 }
 
 // table view 処理 ////////////////////////////////////////////////////////////////////////////////

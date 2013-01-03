@@ -78,14 +78,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-  NSLog(@"test3, %@", [segue identifier]);
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-  NSLog(@"test4");
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        // NSDate *object = _objects[indexPath.row];
-        // [[segue destinationViewController] setDetailItem:object];
-        [[segue destinationViewController] setDetailItem:indexPath.row];
-    }
+  NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+  [[segue destinationViewController] setDetailItem:indexPath.row];
 }
 // 
 // - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
