@@ -221,7 +221,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Web" image="second.png" id="NPz-m7-HYS"/>
                     <connections>
-                        <outlet property="webveiw" destination="gyI-R5-gYa" id="eh8-TM-oWg"/>
+                        <outlet property="webview" destination="gyI-R5-gYa" id="Un0-h3-6IA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TC5-Fs-MyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -360,10 +360,10 @@
                 <relationship kind="outlet" name="userAgent" candidateClass="UITextField"/>
             </relationships>
         </class>
-        <class className="WIForthViewController" superclassName="UIViewController">
+        <class className="WIForthViewController" superclassName="WIBaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WIForthViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="webveiw" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="webview" candidateClass="UIWebView"/>
             </relationships>
         </class>
         <class className="WIResponseViewController" superclassName="WIBaseViewController">

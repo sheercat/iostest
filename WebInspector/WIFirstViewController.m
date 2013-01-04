@@ -171,6 +171,8 @@ didReceiveResponse:(NSURLResponse *)response
     NSString *html = [[NSString alloc]initWithData:receivedData encoding:encoding];
     WIAppDelegate *app = (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
     app.sourceStr = html.copy;
+    app.userAgent = userAgent.text;
+    app.url = url.text;
 }
 
 - (NSURLRequest *)connection:(NSURLConnection *)connection

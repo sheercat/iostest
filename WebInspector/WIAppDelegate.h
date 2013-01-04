@@ -13,6 +13,8 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, copy) NSString *sourceStr;
 @property (nonatomic, copy) NSString *headerStr;
+@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *userAgent;
 @property (nonatomic, copy) NSDictionary *headerDict;
 @property (nonatomic, copy) NSMutableArray *response;
 

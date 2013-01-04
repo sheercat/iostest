@@ -10,7 +10,6 @@
 		E7059B9C1691C5ED00E41F61 /* WIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7059B9B1691C5ED00E41F61 /* WIBaseViewController.m */; };
 		E7059BA01691C7B100E41F61 /* WIResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7059B9F1691C7B100E41F61 /* WIResponseViewController.m */; };
 		E7BFA72A168EEBB300F80018 /* WIThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BFA729168EEBB300F80018 /* WIThirdViewController.m */; };
-		E7BFA72E168EEBD300F80018 /* WIForthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BFA72D168EEBD300F80018 /* WIForthViewController.m */; };
 		E7CC2623168E90980024FBD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CC2622168E90980024FBD1 /* UIKit.framework */; };
 		E7CC2625168E90980024FBD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CC2624168E90980024FBD1 /* Foundation.framework */; };
 		E7CC2627168E90980024FBD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CC2626168E90980024FBD1 /* CoreGraphics.framework */; };
@@ -29,6 +28,7 @@
 		E7CC264B168E90980024FBD1 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E7CC264A168E90980024FBD1 /* second.png */; };
 		E7CC264D168E90980024FBD1 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7CC264C168E90980024FBD1 /* second@2x.png */; };
 		E7E4FA191696A42300BDE649 /* WIFirstScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E4FA181696A42300BDE649 /* WIFirstScrollView.m */; };
+		E7E4FA1D1696DE0A00BDE649 /* WIForthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E4FA1C1696DE0A00BDE649 /* WIForthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,6 @@
 		E7059B9F1691C7B100E41F61 /* WIResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIResponseViewController.m; sourceTree = "<group>"; };
 		E7BFA728168EEBB300F80018 /* WIThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIThirdViewController.h; sourceTree = "<group>"; };
 		E7BFA729168EEBB300F80018 /* WIThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIThirdViewController.m; sourceTree = "<group>"; };
-		E7BFA72C168EEBD300F80018 /* WIForthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WIForthViewController.h; path = ../WIForthViewController.h; sourceTree = "<group>"; };
-		E7BFA72D168EEBD300F80018 /* WIForthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WIForthViewController.m; path = ../WIForthViewController.m; sourceTree = "<group>"; };
 		E7CC261E168E90980024FBD1 /* WebInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CC2622168E90980024FBD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E7CC2624168E90980024FBD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +63,8 @@
 		E7CC264C168E90980024FBD1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		E7E4FA171696A42300BDE649 /* WIFirstScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIFirstScrollView.h; sourceTree = "<group>"; };
 		E7E4FA181696A42300BDE649 /* WIFirstScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIFirstScrollView.m; sourceTree = "<group>"; };
+		E7E4FA1B1696DE0A00BDE649 /* WIForthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIForthViewController.h; sourceTree = "<group>"; };
+		E7E4FA1C1696DE0A00BDE649 /* WIForthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIForthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +131,8 @@
 				E7059B9F1691C7B100E41F61 /* WIResponseViewController.m */,
 				E7BFA728168EEBB300F80018 /* WIThirdViewController.h */,
 				E7BFA729168EEBB300F80018 /* WIThirdViewController.m */,
-				E7BFA72C168EEBD300F80018 /* WIForthViewController.h */,
-				E7BFA72D168EEBD300F80018 /* WIForthViewController.m */,
+				E7E4FA1B1696DE0A00BDE649 /* WIForthViewController.h */,
+				E7E4FA1C1696DE0A00BDE649 /* WIForthViewController.m */,
 				E7CC2629168E90980024FBD1 /* Supporting Files */,
 			);
 			path = WebInspector;
@@ -229,10 +229,10 @@
 				E7CC2642168E90980024FBD1 /* WIFirstViewController.m in Sources */,
 				E7CC2649168E90980024FBD1 /* WISecondViewController.m in Sources */,
 				E7BFA72A168EEBB300F80018 /* WIThirdViewController.m in Sources */,
-				E7BFA72E168EEBD300F80018 /* WIForthViewController.m in Sources */,
 				E7059B9C1691C5ED00E41F61 /* WIBaseViewController.m in Sources */,
 				E7059BA01691C7B100E41F61 /* WIResponseViewController.m in Sources */,
 				E7E4FA191696A42300BDE649 /* WIFirstScrollView.m in Sources */,
+				E7E4FA1D1696DE0A00BDE649 /* WIForthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
