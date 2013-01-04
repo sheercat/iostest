@@ -28,6 +28,7 @@
 		E7CC2649168E90980024FBD1 /* WISecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CC2648168E90980024FBD1 /* WISecondViewController.m */; };
 		E7CC264B168E90980024FBD1 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E7CC264A168E90980024FBD1 /* second.png */; };
 		E7CC264D168E90980024FBD1 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7CC264C168E90980024FBD1 /* second@2x.png */; };
+		E7E4FA191696A42300BDE649 /* WIFirstScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E4FA181696A42300BDE649 /* WIFirstScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		E7CC2648168E90980024FBD1 /* WISecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WISecondViewController.m; sourceTree = "<group>"; };
 		E7CC264A168E90980024FBD1 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		E7CC264C168E90980024FBD1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		E7E4FA171696A42300BDE649 /* WIFirstScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIFirstScrollView.h; sourceTree = "<group>"; };
+		E7E4FA181696A42300BDE649 /* WIFirstScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIFirstScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				E7059B9B1691C5ED00E41F61 /* WIBaseViewController.m */,
 				E7CC2640168E90980024FBD1 /* WIFirstViewController.h */,
 				E7CC2641168E90980024FBD1 /* WIFirstViewController.m */,
+				E7E4FA171696A42300BDE649 /* WIFirstScrollView.h */,
+				E7E4FA181696A42300BDE649 /* WIFirstScrollView.m */,
 				E7CC2647168E90980024FBD1 /* WISecondViewController.h */,
 				E7CC2648168E90980024FBD1 /* WISecondViewController.m */,
 				E7059B9E1691C7B100E41F61 /* WIResponseViewController.h */,
@@ -227,6 +232,7 @@
 				E7BFA72E168EEBD300F80018 /* WIForthViewController.m in Sources */,
 				E7059B9C1691C5ED00E41F61 /* WIBaseViewController.m in Sources */,
 				E7059BA01691C7B100E41F61 /* WIResponseViewController.m in Sources */,
+				E7E4FA191696A42300BDE649 /* WIFirstScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
