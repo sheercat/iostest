@@ -24,7 +24,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     //    headerTable.dataSource = self;
     //    headerTable.delegate = self;
- self.responseViewController = (WIResponseViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.responseViewController = (WIResponseViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +42,7 @@
 // table view delegate ////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
+    
     cell.textLabel.text = [headerArray objectAtIndex:indexPath.row]; // section];
     
     return cell;
@@ -58,11 +58,11 @@
 }
 
 - (NSString *)tableView:(UITableViewCell *)tableView titleForHeaderInSection:(NSInteger)section {
-  if ([headerArrayHeader count] > 0 ) {
-    return [headerArrayHeader objectAtIndex:section];
-  } else {
-    return @"";
-  }
+    if ([headerArrayHeader count] > 0 ) {
+        return [headerArrayHeader objectAtIndex:section];
+    } else {
+        return @"";
+    }
 }
 
 // - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,10 +78,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-  NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-  [[segue destinationViewController] setDetailItem:indexPath.row];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    [[segue destinationViewController] setDetailItem:indexPath.row];
 }
-// 
+//
 // - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //   NSLog(@"hoge");
 //     [tableView deselectRowAtIndexPath:indexPath animated:YES]; // 選択状態の解除をします。
@@ -91,12 +91,6 @@
 // }
 
 ////////////////////////////////////////////////////////////////////////////////
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-  //NSLog(@"super touch %@", event);
-   [super touchesBegan:touches withEvent:event];
-}
-
 
 - (void)updateResponse:(NSArray *)response
 {

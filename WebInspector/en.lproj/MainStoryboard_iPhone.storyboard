@@ -262,7 +262,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo3-pi-cey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963" y="-185"/>
+            <point key="canvasLocation" x="927" y="-185"/>
         </scene>
         <!--Navigation Controller - Header-->
         <scene sceneID="PHb-M2-Udt">
@@ -288,29 +288,26 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0tZ-V8-V7T">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XzT-ZK-car">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="499" id="dvg-Zt-uus"/>
-                                </constraints>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0tZ-V8-V7T" firstAttribute="top" secondItem="3hb-b8-jWu" secondAttribute="top" constant="-5" id="Dkm-Gj-i8q"/>
-                            <constraint firstItem="0tZ-V8-V7T" firstAttribute="leading" secondItem="3hb-b8-jWu" secondAttribute="leading" type="default" id="n3I-Ih-sLs"/>
-                            <constraint firstItem="0tZ-V8-V7T" firstAttribute="trailing" secondItem="3hb-b8-jWu" secondAttribute="trailing" type="default" id="nQi-SZ-i6G"/>
+                            <constraint firstItem="XzT-ZK-car" firstAttribute="leading" secondItem="3hb-b8-jWu" secondAttribute="leading" type="default" id="DrK-Wy-KY6"/>
+                            <constraint firstItem="XzT-ZK-car" firstAttribute="trailing" secondItem="3hb-b8-jWu" secondAttribute="trailing" type="default" id="Ej3-fe-42N"/>
+                            <constraint firstItem="XzT-ZK-car" firstAttribute="bottom" secondItem="3hb-b8-jWu" secondAttribute="bottom" type="default" id="GaU-jn-hkP"/>
+                            <constraint firstItem="XzT-ZK-car" firstAttribute="top" secondItem="3hb-b8-jWu" secondAttribute="top" type="default" id="YvC-IC-sNV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pn4-fv-WuF"/>
                     <navigationItem key="navigationItem" title="Detail" id="A6I-Fu-867"/>
                     <connections>
-                        <outlet property="responseHeader" destination="0tZ-V8-V7T" id="VBX-W1-LhF"/>
+                        <outlet property="responseHeader" destination="XzT-ZK-car" id="4mi-Bt-cqo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNK-sn-xAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="-185"/>
+            <point key="canvasLocation" x="1370" y="-185"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -357,7 +354,7 @@
                 <relationship kind="outlet" name="header" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="inihibitRedirection" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="password" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="WIFirstScrollView"/>
                 <relationship kind="outlet" name="url" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="useBasicAuth" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="userAgent" candidateClass="UITextField"/>

@@ -65,7 +65,8 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [headerArray count];
+  // NSLog(@"%d", [headerArray count]);
+    return [headerArrayHeader count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
