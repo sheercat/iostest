@@ -25,6 +25,19 @@
     //    headerTable.dataSource = self;
     //    headerTable.delegate = self;
     self.responseViewController = (WIResponseViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(clearItem:)];
+    self.navigationItem.rightBarButtonItem = addButton;
+}
+
+- (void)clearItem:(id)sender
+{
+    WIAppDelegate *app = (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app.response removeAllObjects];
+    [headerArray removeAllObjects];
+    [headerArrayHeader removeAllObjects];
+    // for (UIView *view in [self.tableView subviews]) {  [view removeFromSuperview]; }
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,8 +55,12 @@
 // table view delegate ////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    cell.textLabel.text = [headerArray objectAtIndex:indexPath.row]; // section];
+
+    if ([headerArray count] == 0) {
+        cell.textLabel.text = @"";
+    } else {
+        cell.textLabel.text = [headerArray objectAtIndex:indexPath.row]; // section];
+    }
     
     return cell;
 }

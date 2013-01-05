@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="506" y="1165"/>
         </scene>
-        <!--Second View Controller - Header-->
+        <!--Second View Controller - Request Headers-->
         <scene sceneID="ECZ-bm-rPI">
             <objects>
                 <tableViewController id="qlc-8F-GMv" customClass="WISecondViewController" sceneMemberID="viewController">
@@ -258,7 +258,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Header" id="2xX-f8-khL"/>
+                    <navigationItem key="navigationItem" title="Request Headers" id="2xX-f8-khL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uo3-pi-cey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
