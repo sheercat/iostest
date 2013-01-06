@@ -17,5 +17,8 @@
 @property (nonatomic, copy) NSString *userAgent;
 @property (nonatomic, copy) NSDictionary *headerDict;
 @property (nonatomic, copy) NSMutableArray *response;
+@property (nonatomic) Boolean useBasicAuth;
+@property (nonatomic, copy) NSString *auth_account;
+@property (nonatomic, copy) NSString *auth_password;
 
 @end

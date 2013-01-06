@@ -173,6 +173,9 @@ didReceiveResponse:(NSURLResponse *)response
     app.sourceStr = html.copy;
     app.userAgent = userAgent.text;
     app.url = url.text;
+    app.useBasicAuth = useBasicAuth.on;
+    app.auth_account = account.text;
+    app.auth_password = password.text;
 }
 
 - (NSURLRequest *)connection:(NSURLConnection *)connection

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E7059B9C1691C5ED00E41F61 /* WIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7059B9B1691C5ED00E41F61 /* WIBaseViewController.m */; };
 		E7059BA01691C7B100E41F61 /* WIResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7059B9F1691C7B100E41F61 /* WIResponseViewController.m */; };
+		E7AA7FD71699957900522C87 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AA7FD61699957900522C87 /* NSString+Base64.m */; };
+		E7AA7FDA1699A08700522C87 /* WIURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AA7FD91699A08700522C87 /* WIURLProtocol.m */; };
 		E7BFA72A168EEBB300F80018 /* WIThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BFA729168EEBB300F80018 /* WIThirdViewController.m */; };
 		E7CC2623168E90980024FBD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CC2622168E90980024FBD1 /* UIKit.framework */; };
 		E7CC2625168E90980024FBD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CC2624168E90980024FBD1 /* Foundation.framework */; };
@@ -36,6 +38,10 @@
 		E7059B9B1691C5ED00E41F61 /* WIBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIBaseViewController.m; sourceTree = "<group>"; };
 		E7059B9E1691C7B100E41F61 /* WIResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIResponseViewController.h; sourceTree = "<group>"; };
 		E7059B9F1691C7B100E41F61 /* WIResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIResponseViewController.m; sourceTree = "<group>"; };
+		E7AA7FD51699957900522C87 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		E7AA7FD61699957900522C87 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		E7AA7FD81699A08700522C87 /* WIURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIURLProtocol.h; sourceTree = "<group>"; };
+		E7AA7FD91699A08700522C87 /* WIURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIURLProtocol.m; sourceTree = "<group>"; };
 		E7BFA728168EEBB300F80018 /* WIThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIThirdViewController.h; sourceTree = "<group>"; };
 		E7BFA729168EEBB300F80018 /* WIThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIThirdViewController.m; sourceTree = "<group>"; };
 		E7CC261E168E90980024FBD1 /* WebInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +139,10 @@
 				E7BFA729168EEBB300F80018 /* WIThirdViewController.m */,
 				E7E4FA1B1696DE0A00BDE649 /* WIForthViewController.h */,
 				E7E4FA1C1696DE0A00BDE649 /* WIForthViewController.m */,
+				E7AA7FD81699A08700522C87 /* WIURLProtocol.h */,
+				E7AA7FD91699A08700522C87 /* WIURLProtocol.m */,
+				E7AA7FD51699957900522C87 /* NSString+Base64.h */,
+				E7AA7FD61699957900522C87 /* NSString+Base64.m */,
 				E7CC2629168E90980024FBD1 /* Supporting Files */,
 			);
 			path = WebInspector;
@@ -233,6 +243,8 @@
 				E7059BA01691C7B100E41F61 /* WIResponseViewController.m in Sources */,
 				E7E4FA191696A42300BDE649 /* WIFirstScrollView.m in Sources */,
 				E7E4FA1D1696DE0A00BDE649 /* WIForthViewController.m in Sources */,
+				E7AA7FD71699957900522C87 /* NSString+Base64.m in Sources */,
+				E7AA7FDA1699A08700522C87 /* WIURLProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -325,6 +338,7 @@
 				GCC_PREFIX_HEADER = "WebInspector/WebInspector-Prefix.pch";
 				INFOPLIST_FILE = "WebInspector/WebInspector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -336,6 +350,7 @@
 				GCC_PREFIX_HEADER = "WebInspector/WebInspector-Prefix.pch";
 				INFOPLIST_FILE = "WebInspector/WebInspector-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
