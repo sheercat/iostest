@@ -28,7 +28,9 @@
 		if (i < length) n += s[i];
 		i++;
 		n *= 256;
-		if (i < length) n += s[i]; 		i++; 		 		p[0] = tbl[((n & 0x00fc0000) >> 18)];
+		if (i < length) n += s[i];
+        i++;
+        p[0] = tbl[((n & 0x00fc0000) >> 18)];
 		p[1] = tbl[((n & 0x0003f000) >> 12)];
 		p[2] = tbl[((n & 0x00000fc0) >>  6)];
 		p[3] = tbl[((n & 0x0000003f) >>  0)];
@@ -41,7 +43,7 @@
     
 	*p = '\0';
     
-	NSString *ret = [NSString stringWithCString:tmp];
+	NSString *ret = [NSString stringWithUTF8String:tmp];
 	free(tmp);
     
 	return ret;
