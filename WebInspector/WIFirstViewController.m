@@ -36,6 +36,18 @@
     [userAgent setDelegate:self];
     
     userAgent.text = [self defaultUserAgent];
+    
+    // インスタンスを作成する。
+    // initで指定するスタイルは、カスタマイズのところで説明を書きます。
+    self.indicator = [[UIActivityIndicatorView alloc] init];
+    self.indicator.frame = CGRectMake(0, 0, 50, 50);
+    self.indicator.center = self.view.center;
+    self.indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    self.indicator.hidesWhenStopped = YES;
+    self.indicator.color = [UIColor redColor];
+
+    // 現在のサブビューとして登録する
+    [self.scrollView addSubview:self.indicator];
 }
 
 // デバイスの情報を返す
@@ -80,6 +92,7 @@
     NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:(NSURLRequest *)urlRequest delegate:self];
     if (theConnection) {
         NSLog(@"start loading");
+        [self.indicator startAnimating];
         receivedData = [NSMutableData data];
     } else {
         NSLog(@"unknown error");
@@ -104,14 +117,18 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
 
+  NSLog(@"challenge");
     if ([challenge proposedCredential]) {
+  NSLog(@"challenge already");
         [connection cancel];
+    [self.indicator stopAnimating];
     } else {
         if (useBasicAuth.on) {
+  NSLog(@"challenge");
             NSURLCredential *credential = [NSURLCredential credentialWithUser:account.text password:password.text persistence:NSURLCredentialPersistenceNone];
             [[challenge sender] useCredential:credential forAuthenticationChallenge:challenge];
         } else {
-            NSLog(@"hogehoge");
+            NSLog(@"not challenge");
             [[challenge sender] continueWithoutCredentialForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge];
         }
     }
@@ -150,6 +167,7 @@ didReceiveResponse:(NSURLResponse *)response
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil];
     [alert show];
+    [self.indicator stopAnimating];
 
 }
 
@@ -176,6 +194,8 @@ didReceiveResponse:(NSURLResponse *)response
     app.useBasicAuth = useBasicAuth.on;
     app.auth_account = account.text;
     app.auth_password = password.text;
+
+    [self.indicator stopAnimating];
 }
 
 - (NSURLRequest *)connection:(NSURLConnection *)connection

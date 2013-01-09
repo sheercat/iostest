@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *userAgent;
 @property (weak, nonatomic) IBOutlet UITextField *activeField;
 @property (nonatomic) NSHTTPURLResponse *last_response;
+@property (nonatomic) UIActivityIndicatorView *indicator;
 
 @end
