@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E7059B9C1691C5ED00E41F61 /* WIBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7059B9B1691C5ED00E41F61 /* WIBaseViewController.m */; };
 		E7059BA01691C7B100E41F61 /* WIResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7059B9F1691C7B100E41F61 /* WIResponseViewController.m */; };
+		E70969EE16A3F7A400ADF52B /* WIDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E70969ED16A3F7A400ADF52B /* WIDetailViewController.m */; };
 		E7AA7FD71699957900522C87 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AA7FD61699957900522C87 /* NSString+Base64.m */; };
 		E7AA7FDA1699A08700522C87 /* WIURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AA7FD91699A08700522C87 /* WIURLProtocol.m */; };
 		E7BFA72A168EEBB300F80018 /* WIThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BFA729168EEBB300F80018 /* WIThirdViewController.m */; };
@@ -29,6 +30,7 @@
 		E7CC2649168E90980024FBD1 /* WISecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CC2648168E90980024FBD1 /* WISecondViewController.m */; };
 		E7CC264B168E90980024FBD1 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E7CC264A168E90980024FBD1 /* second.png */; };
 		E7CC264D168E90980024FBD1 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7CC264C168E90980024FBD1 /* second@2x.png */; };
+		E7DB8D3516A3EC5000B5C5B9 /* Untitled0.png in Resources */ = {isa = PBXBuildFile; fileRef = E7DB8D3416A3EC5000B5C5B9 /* Untitled0.png */; };
 		E7E4FA191696A42300BDE649 /* WIFirstScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E4FA181696A42300BDE649 /* WIFirstScrollView.m */; };
 		E7E4FA1D1696DE0A00BDE649 /* WIForthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E4FA1C1696DE0A00BDE649 /* WIForthViewController.m */; };
 /* End PBXBuildFile section */
@@ -38,13 +40,15 @@
 		E7059B9B1691C5ED00E41F61 /* WIBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIBaseViewController.m; sourceTree = "<group>"; };
 		E7059B9E1691C7B100E41F61 /* WIResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIResponseViewController.h; sourceTree = "<group>"; };
 		E7059B9F1691C7B100E41F61 /* WIResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIResponseViewController.m; sourceTree = "<group>"; };
+		E70969EC16A3F7A400ADF52B /* WIDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIDetailViewController.h; sourceTree = "<group>"; };
+		E70969ED16A3F7A400ADF52B /* WIDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIDetailViewController.m; sourceTree = "<group>"; };
 		E7AA7FD51699957900522C87 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		E7AA7FD61699957900522C87 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		E7AA7FD81699A08700522C87 /* WIURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIURLProtocol.h; sourceTree = "<group>"; };
 		E7AA7FD91699A08700522C87 /* WIURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIURLProtocol.m; sourceTree = "<group>"; };
 		E7BFA728168EEBB300F80018 /* WIThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIThirdViewController.h; sourceTree = "<group>"; };
 		E7BFA729168EEBB300F80018 /* WIThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIThirdViewController.m; sourceTree = "<group>"; };
-		E7CC261E168E90980024FBD1 /* WebInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7CC261E168E90980024FBD1 /* HTTPHeaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPHeaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7CC2622168E90980024FBD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E7CC2624168E90980024FBD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E7CC2626168E90980024FBD1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,6 +71,7 @@
 		E7CC2648168E90980024FBD1 /* WISecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WISecondViewController.m; sourceTree = "<group>"; };
 		E7CC264A168E90980024FBD1 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		E7CC264C168E90980024FBD1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		E7DB8D3416A3EC5000B5C5B9 /* Untitled0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled0.png; sourceTree = "<group>"; };
 		E7E4FA171696A42300BDE649 /* WIFirstScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIFirstScrollView.h; sourceTree = "<group>"; };
 		E7E4FA181696A42300BDE649 /* WIFirstScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIFirstScrollView.m; sourceTree = "<group>"; };
 		E7E4FA1B1696DE0A00BDE649 /* WIForthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIForthViewController.h; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 		E7CC2613168E90980024FBD1 = {
 			isa = PBXGroup;
 			children = (
+				E7DB8D3416A3EC5000B5C5B9 /* Untitled0.png */,
 				E7CC2628168E90980024FBD1 /* WebInspector */,
 				E7CC2621168E90980024FBD1 /* Frameworks */,
 				E7CC261F168E90980024FBD1 /* Products */,
@@ -99,7 +105,7 @@
 		E7CC261F168E90980024FBD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7CC261E168E90980024FBD1 /* WebInspector.app */,
+				E7CC261E168E90980024FBD1 /* HTTPHeaders.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +150,8 @@
 				E7AA7FD51699957900522C87 /* NSString+Base64.h */,
 				E7AA7FD61699957900522C87 /* NSString+Base64.m */,
 				E7CC2629168E90980024FBD1 /* Supporting Files */,
+				E70969EC16A3F7A400ADF52B /* WIDetailViewController.h */,
+				E70969ED16A3F7A400ADF52B /* WIDetailViewController.m */,
 			);
 			path = WebInspector;
 			sourceTree = "<group>";
@@ -179,7 +187,7 @@
 			);
 			name = WebInspector;
 			productName = WebInspector;
-			productReference = E7CC261E168E90980024FBD1 /* WebInspector.app */;
+			productReference = E7CC261E168E90980024FBD1 /* HTTPHeaders.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -224,6 +232,7 @@
 				E7CC2646168E90980024FBD1 /* first@2x.png in Resources */,
 				E7CC264B168E90980024FBD1 /* second.png in Resources */,
 				E7CC264D168E90980024FBD1 /* second@2x.png in Resources */,
+				E7DB8D3516A3EC5000B5C5B9 /* Untitled0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +254,7 @@
 				E7E4FA1D1696DE0A00BDE649 /* WIForthViewController.m in Sources */,
 				E7AA7FD71699957900522C87 /* NSString+Base64.m in Sources */,
 				E7AA7FDA1699A08700522C87 /* WIURLProtocol.m in Sources */,
+				E70969EE16A3F7A400ADF52B /* WIDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +312,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = HTTPHeaders;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -325,6 +336,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = HTTPHeaders;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -337,7 +349,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebInspector/WebInspector-Prefix.pch";
 				INFOPLIST_FILE = "WebInspector/WebInspector-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HTTPHeaders;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -349,7 +361,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebInspector/WebInspector-Prefix.pch";
 				INFOPLIST_FILE = "WebInspector/WebInspector-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HTTPHeaders;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

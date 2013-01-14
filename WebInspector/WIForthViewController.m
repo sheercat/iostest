@@ -32,8 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    // static dispatch_once_t onceToken;
-    // dispatch_once(&onceToken, ^{ [NSURLProtocol registerClass:[WIURLProtocol class]]; });
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{ [NSURLProtocol registerClass:[WIURLProtocol class]]; });
 
     // [webview setDelegate:self];
 }

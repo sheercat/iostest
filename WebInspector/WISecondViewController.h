@@ -10,7 +10,7 @@
 #import "WIResponseViewController.h"
 
 @interface WISecondViewController : UITableViewController
-@property (strong, nonatomic) WIResponseViewController *responseViewController;
+// @property (strong, nonatomic) WIResponseViewController *responseViewController;
 @property (nonatomic, copy) NSMutableArray *headerArray;
 @property (nonatomic, copy) NSMutableArray *headerArrayHeader;
 

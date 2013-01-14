@@ -237,19 +237,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="oL4-og-lHy" style="IBUITableViewCellStyleDefault" id="JSA-Az-9nd">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="JSA-Az-9nd">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL4-og-lHy">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
@@ -290,6 +283,20 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XzT-ZK-car">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="0l1-Z5-G5W">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="big-SC-vYF" kind="push" id="GSI-ui-TKV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -308,6 +315,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNK-sn-xAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1370" y="-185"/>
+        </scene>
+        <!--Detail View Controller - content-->
+        <scene sceneID="aZo-2k-Zc8">
+            <objects>
+                <viewController title="content" id="big-SC-vYF" customClass="WIDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T8g-hU-1nZ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-SO-o8z"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hUs-SO-o8z" firstAttribute="leading" secondItem="T8g-hU-1nZ" secondAttribute="leading" type="default" id="Bdc-IV-IE5"/>
+                            <constraint firstItem="hUs-SO-o8z" firstAttribute="trailing" secondItem="T8g-hU-1nZ" secondAttribute="trailing" type="default" id="MS2-QY-Jho"/>
+                            <constraint firstItem="hUs-SO-o8z" firstAttribute="top" secondItem="T8g-hU-1nZ" secondAttribute="top" type="default" id="ZFH-LB-6qR"/>
+                            <constraint firstItem="hUs-SO-o8z" firstAttribute="bottom" secondItem="T8g-hU-1nZ" secondAttribute="bottom" type="default" id="mOv-Sf-IXD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Content" id="plm-ij-3et"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3H-0v-evg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771" y="-185"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -341,6 +372,9 @@
         </class>
         <class className="WIBaseViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WIBaseViewController.h"/>
+        </class>
+        <class className="WIDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WIDetailViewController.h"/>
         </class>
         <class className="WIFirstScrollView" superclassName="UIScrollView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WIFirstScrollView.h"/>

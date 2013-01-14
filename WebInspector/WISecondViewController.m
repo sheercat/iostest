@@ -8,7 +8,7 @@
 
 #import "WISecondViewController.h"
 #import "WIAppDelegate.h"
-#import "WIResponseViewController.h"
+// #import "WIResponseViewController.h"
 
 @interface WISecondViewController ()
 
@@ -24,7 +24,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     //    headerTable.dataSource = self;
     //    headerTable.delegate = self;
-    self.responseViewController = (WIResponseViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    // self.responseViewController = (WIResponseViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(clearItem:)];
     self.navigationItem.rightBarButtonItem = addButton;
