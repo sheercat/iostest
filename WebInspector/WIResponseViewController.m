@@ -8,6 +8,7 @@
 
 #import "WIResponseViewController.h"
 #import "WIAppDelegate.h"
+#import "WIDetailViewController.h"
 
 @interface WIResponseViewController ()
 
@@ -18,7 +19,6 @@
 @synthesize headerArrayHeader;
 @synthesize responseHeader;
 @synthesize detailItem;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,6 +47,14 @@
     WIAppDelegate *app = (WIAppDelegate *)[[UIApplication sharedApplication] delegate];
     [self updateResponse:[app.response objectAtIndex:detailItem]];
     [self.responseHeader reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = [self.responseHeader indexPathForSelectedRow];
+
+    WIDetailViewController *dest = (WIDetailViewController *)[segue destinationViewController];
+    [dest setContentString:[headerArray objectAtIndex:indexPath.section]];
 }
 
 // table view 処理 ////////////////////////////////////////////////////////////////////////////////

@@ -324,17 +324,25 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUs-SO-o8z"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b79-4y-t0g">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hUs-SO-o8z" firstAttribute="leading" secondItem="T8g-hU-1nZ" secondAttribute="leading" type="default" id="Bdc-IV-IE5"/>
-                            <constraint firstItem="hUs-SO-o8z" firstAttribute="trailing" secondItem="T8g-hU-1nZ" secondAttribute="trailing" type="default" id="MS2-QY-Jho"/>
-                            <constraint firstItem="hUs-SO-o8z" firstAttribute="top" secondItem="T8g-hU-1nZ" secondAttribute="top" type="default" id="ZFH-LB-6qR"/>
-                            <constraint firstItem="hUs-SO-o8z" firstAttribute="bottom" secondItem="T8g-hU-1nZ" secondAttribute="bottom" type="default" id="mOv-Sf-IXD"/>
+                            <constraint firstItem="b79-4y-t0g" firstAttribute="trailing" secondItem="T8g-hU-1nZ" secondAttribute="trailing" type="default" id="8p2-6Y-N95"/>
+                            <constraint firstItem="b79-4y-t0g" firstAttribute="bottom" secondItem="T8g-hU-1nZ" secondAttribute="bottom" type="default" id="CJw-Le-feC"/>
+                            <constraint firstItem="b79-4y-t0g" firstAttribute="leading" secondItem="T8g-hU-1nZ" secondAttribute="leading" type="default" id="gr9-qV-jme"/>
+                            <constraint firstItem="b79-4y-t0g" firstAttribute="top" secondItem="T8g-hU-1nZ" secondAttribute="top" type="default" id="hJY-S9-Tn1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Content" id="plm-ij-3et"/>
+                    <connections>
+                        <outlet property="content" destination="b79-4y-t0g" id="vMR-AG-k9Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3H-0v-evg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -375,6 +383,9 @@
         </class>
         <class className="WIDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WIDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="content" candidateClass="UITextView"/>
+            </relationships>
         </class>
         <class className="WIFirstScrollView" superclassName="UIScrollView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WIFirstScrollView.h"/>

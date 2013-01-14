@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface WIDetailViewController : UIViewController
+@property (nonatomic) NSString *contentString;
+@property (weak, nonatomic) IBOutlet UITextView *content;
 
 @end

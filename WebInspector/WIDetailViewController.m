@@ -7,12 +7,15 @@
 //
 
 #import "WIDetailViewController.h"
+#import "WIAppDelegate.h"
 
 @interface WIDetailViewController ()
 
 @end
 
 @implementation WIDetailViewController
+@synthesize contentString;
+@synthesize content;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +30,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    //
+    content.text = contentString;
+    content.editable = NO;
 }
 
 - (void)didReceiveMemoryWarning
