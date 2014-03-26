@@ -199,6 +199,11 @@
 				CLASSPREFIX = WI;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Tomoo Amano";
+				TargetAttributes = {
+					E7CC261D168E90980024FBD1 = {
+						DevelopmentTeam = YPUB7S9AV8;
+					};
+				};
 			};
 			buildConfigurationList = E7CC2618168E90980024FBD1 /* Build configuration list for PBXProject "WebInspector" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -346,6 +351,7 @@
 		E7CC2651168E90980024FBD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebInspector/WebInspector-Prefix.pch";
 				INFOPLIST_FILE = "WebInspector/WebInspector-Info.plist";
@@ -358,6 +364,7 @@
 		E7CC2652168E90980024FBD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebInspector/WebInspector-Prefix.pch";
 				INFOPLIST_FILE = "WebInspector/WebInspector-Info.plist";
